@@ -1,0 +1,249 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for contrast */
+    text-align: right;
+    overflow-x: hidden;
+}
+
+strong {
+    color: #ffffff; /* Brighter text for emphasis */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #1f1f1f; /* Darker header */
+    color: #ffffff;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navigation */
+nav {
+    float: left;
+    text-align: left;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 25px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 18px;
+}
+
+nav ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #6a89cc; /* New accent color for hover */
+    transform: translateY(-2px);
+}
+
+/* Header Content (Logo and Title) */
+.header-content {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(106, 137, 204, 0.5); /* Accent color glow */
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #ffffff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.title p {
+    margin: 5px 0 0;
+    font-size: 1em;
+    color: #b0b0b0; /* Lighter text for contrast */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6a89cc; /* New accent color */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    background-color: #4a69bd; /* Darker accent on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+    clear: both;
+}
+
+section {
+    margin-bottom: 40px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+section h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #6a89cc; /* New accent color for headings */
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.workshop {
+    background: #1f1f1f; /* Dark card background */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workshop:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(106, 137, 204, 0.5); /* Accent color glow */
+}
+
+.workshop h3 {
+    margin-top: 0;
+    color: #6a89cc; /* New accent color for subheadings */
+    font-size: 1.5em;
+}
+
+.workshop p {
+    margin: 10px 0;
+    color: #b0b0b0; /* Lighter text for contrast */
+}
+
+.workshop ul {
+    padding-left: 20px;
+}
+
+.workshop ul li {
+    margin-bottom: 10px;
+    color: #b0b0b0;
+}
+
+/* Footer */
+footer {
+    background: #1f1f1f; /* Dark footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Class to apply the animation */
+.fade-in {
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        float: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .header-content {
+        float: none;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .title h1 {
+        font-size: 1.5em;
+    }
+
+    .title p {
+        font-size: 0.9em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+}
